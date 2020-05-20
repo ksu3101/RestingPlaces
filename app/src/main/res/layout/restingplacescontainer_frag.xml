@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="vm"
+            type="com.swkang.model.domain.restingplaces.RestingPlacesContainerViewModel" />
+    </data>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/restingplaces_container_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:vms="@{vm.pagerItemViewModels}">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/restingplaces_container_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:vms="@{vm.pagerItemViewModels}">
+            <!--app:setupWithViewPager="@{restingplaces_container_vp}" -->
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tabtitle_default" />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tabtitle_fav" />
+        </com.google.android.material.tabs.TabLayout>
+
+    </androidx.viewpager.widget.ViewPager>
+
+</layout>

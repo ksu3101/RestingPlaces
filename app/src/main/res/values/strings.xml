@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RestingPlaces</string>
+
+    <string name="tabtitle_default">쉼터 목록</string>
+    <string name="tabtitle_fav">즐겨찾기 목록</string>
+
+</resources>

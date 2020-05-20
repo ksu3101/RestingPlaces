@@ -1,0 +1,4 @@
+rootProject.name='RestingPlaces'
+include ':app'
+include ':model'
+include ':common'
