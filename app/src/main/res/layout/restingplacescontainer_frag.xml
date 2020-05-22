@@ -17,8 +17,7 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/restingplaces_container_tablayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:vms="@{vm.pagerItemViewModels}">
+            android:layout_height="wrap_content">
             <!--app:setupWithViewPager="@{restingplaces_container_vp}" -->
             <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"

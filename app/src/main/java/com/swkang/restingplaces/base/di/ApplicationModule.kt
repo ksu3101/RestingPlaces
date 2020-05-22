@@ -1,7 +1,8 @@
 package com.swkang.restingplaces.base.di
 
-import android.app.Application
 import android.content.Context
+import com.swkang.model.base.helper.MessageHelper
+import com.swkang.restingplaces.base.helper.MessageHelperImpl
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -10,15 +11,13 @@ import javax.inject.Singleton
  * @author kangsungwoo
  * @since 5/16/2020
  */
-
 @Module
-class ApplicationModule(
-    private val application: Application
-) {
-    @Provides
+object ApplicationModule {
+
     @Singleton
-    fun provideApplicationContext(): Context {
-        return application
+    @Provides
+    fun provideMessageHelper(context: Context): MessageHelper {
+        return MessageHelperImpl(context)
     }
 
 }

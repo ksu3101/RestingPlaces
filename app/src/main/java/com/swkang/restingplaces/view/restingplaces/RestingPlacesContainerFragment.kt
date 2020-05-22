@@ -6,7 +6,6 @@ import com.swkang.model.base.BaseViewModel
 import com.swkang.model.domain.restingplaces.RestingPlacesContainerViewModel
 import com.swkang.restingplaces.R
 import com.swkang.restingplaces.base.BaseFragment
-import com.swkang.restingplaces.base.di.component.ActivityComponent
 import javax.inject.Inject
 
 /**
@@ -23,9 +22,5 @@ class RestingPlacesContainerFragment : BaseFragment() {
     override fun getLayoutId(): Int = R.layout.restingplacescontainer_frag
 
     override fun createViewModel(): BaseViewModel? = vm
-
-    override fun onInject(activityComponent: ActivityComponent) {
-        activityComponent.inject(this)
-    }
 
 }

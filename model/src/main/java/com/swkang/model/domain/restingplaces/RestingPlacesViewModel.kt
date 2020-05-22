@@ -9,14 +9,15 @@ import com.swkang.model.base.helper.MessageHelper
 import com.swkang.model.base.subscribeWith
 import com.swkang.model.domain.restingplaces.repository.RestingPlaceRepository
 import com.swkang.model.domain.restingplaces.rvvms.RestingPlaceItemViewModel
+import javax.inject.Inject
 
 /**
  * @author kangsungwoo
  * @since 5/17/2020
  */
-open class RestingPlacesViewModel(
-    val repo: RestingPlaceRepository,
-    val messageHelper: MessageHelper
+open class RestingPlacesViewModel @Inject constructor(
+//    val repo: RestingPlaceRepository,
+//    val messageHelper: MessageHelper
 ) : BaseViewModel() {
 
     val restingPaceItems = ObservableArrayList<ViewModel>()
@@ -39,6 +40,7 @@ open class RestingPlacesViewModel(
 
     private fun retrieveRestingPlace(page: Int = 0) {
         if (!checkLoadNextPage()) return
+        /*
         isLoadNextPage = true
         repo.retrieveRestingPlace(page)
             .toObservable()
@@ -58,6 +60,7 @@ open class RestingPlacesViewModel(
                     // todo : re-try alert dialog
                     isLoadNextPage = false
                 })
+         */
     }
 
 }

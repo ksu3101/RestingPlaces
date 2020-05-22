@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.MapKey
 import javax.inject.Inject
 import javax.inject.Provider
-import javax.inject.Singleton
 import kotlin.reflect.KClass
 
 /**
@@ -17,7 +16,7 @@ import kotlin.reflect.KClass
  * @since 5/16/2020
  */
 class ViewModelFactory @Inject constructor(
-    private val vms: Map<Class<out ViewModel>, Provider<ViewModel>>
+    private val vms: @JvmSuppressWildcards Map<Class<out ViewModel>, Provider<ViewModel>>
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return vms[modelClass]?.get() as T

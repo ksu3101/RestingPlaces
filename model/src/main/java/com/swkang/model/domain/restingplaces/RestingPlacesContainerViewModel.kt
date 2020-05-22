@@ -13,14 +13,14 @@ import javax.inject.Inject
  * @since 5/18/2020
  */
 class RestingPlacesContainerViewModel @Inject constructor(
-    repo: RestingPlaceRepository,
-    messageHelper: MessageHelper
+//    repo: RestingPlaceRepository,
+//    messageHelper: MessageHelper
 ) : BaseViewModel() {
 
     private val _pagerItemViewModels: MutableLiveData<List<ViewModel>> = MutableLiveData(
         listOf(
-            RestingPlacesViewModel(repo, messageHelper),//, messageHelper),
-            FavRestingPlacesViewModel(repo, messageHelper)//, messageHelper)
+//            RestingPlacesViewModel(repo, messageHelper),//, messageHelper),
+//            FavRestingPlacesViewModel(repo, messageHelper)//, messageHelper)
         )
     )
     val pagerItemViewModels: LiveData<List<ViewModel>>

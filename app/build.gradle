@@ -70,6 +70,8 @@ dependencies {
 	implementation "com.squareup.okhttp3:logging-interceptor:$okhttpLoggingInterceptor"
 	implementation "com.google.dagger:dagger:$dagger"
 	kapt "com.google.dagger:dagger-compiler:$dagger"
+	implementation "com.google.dagger:dagger-android-support:$dagger"
+	kapt "com.google.dagger:dagger-android-processor:$dagger"
 
 
 	testImplementation "junit:junit:$jUnit"
