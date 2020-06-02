@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.viewpager.widget.ViewPager
 import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayout
-import com.swkang.model.domain.restingplaces.FavRestingPlacesViewModel
+import com.swkang.model.domain.restingplaces.restingplaces.FavRestingPlacesViewModel
 import com.swkang.restingplaces.R
 import com.swkang.restingplaces.base.databinding.viewpager.ViewPagerModelAdapter
 

@@ -1,4 +1,4 @@
-package com.swkang.model.domain.restingplaces
+package com.swkang.model.domain.restingplaces.restingplaces
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

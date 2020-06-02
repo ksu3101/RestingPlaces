@@ -1,7 +1,7 @@
 package com.swkang.model.base
 
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import com.swkang.model.base.redux.State
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
@@ -24,4 +24,8 @@ abstract class BaseViewModel : ViewModel(), RxDisposer {
             compositeDisposable.dispose()
         }
     }
+}
+
+interface StateRenderViewModel<in S : State> {
+    fun render(state: S): Boolean
 }

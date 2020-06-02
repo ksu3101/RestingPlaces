@@ -5,9 +5,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.swkang.model.base.BaseViewModel
+import com.swkang.model.base.StateRenderViewModel
 import com.swkang.model.base.helper.MessageHelper
 import com.swkang.model.base.subscribeWith
 import com.swkang.model.domain.restingplaces.repository.RestingPlaceRepository
+import com.swkang.model.domain.restingplaces.restingplaces.RestingPlacesState
 import com.swkang.model.domain.restingplaces.rvvms.RestingPlaceItemViewModel
 import javax.inject.Inject
 
@@ -16,9 +18,9 @@ import javax.inject.Inject
  * @since 5/17/2020
  */
 open class RestingPlacesViewModel @Inject constructor(
-//    val repo: RestingPlaceRepository,
-//    val messageHelper: MessageHelper
-) : BaseViewModel() {
+    val repo: RestingPlaceRepository,
+    val messageHelper: MessageHelper
+) : BaseViewModel(), StateRenderViewModel<RestingPlacesState> {
 
     val restingPaceItems = ObservableArrayList<ViewModel>()
 
@@ -34,13 +36,16 @@ open class RestingPlacesViewModel @Inject constructor(
         retrieveRestingPlace(currentPage)
     }
 
+    override fun render(state: RestingPlacesState): Boolean {
+        return false
+    }
+
     private fun checkLoadNextPage(): Boolean {
         return !isLoadNextPage && restingPaceItems.size < totalCount
     }
 
     private fun retrieveRestingPlace(page: Int = 0) {
         if (!checkLoadNextPage()) return
-        /*
         isLoadNextPage = true
         repo.retrieveRestingPlace(page)
             .toObservable()
@@ -60,7 +65,6 @@ open class RestingPlacesViewModel @Inject constructor(
                     // todo : re-try alert dialog
                     isLoadNextPage = false
                 })
-         */
     }
 
 }

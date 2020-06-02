@@ -1,7 +1,7 @@
 package com.swkang.restingplaces.base.di.domainmodules
 
 import androidx.lifecycle.ViewModel
-import com.swkang.model.domain.restingplaces.FavRestingPlacesViewModel
+import com.swkang.model.domain.restingplaces.restingplaces.FavRestingPlacesViewModel
 import com.swkang.restingplaces.base.ViewModelKey
 import com.swkang.restingplaces.base.di.ViewModelBuilder
 import com.swkang.restingplaces.view.restingplaces.FavRestingPlacesFragment
